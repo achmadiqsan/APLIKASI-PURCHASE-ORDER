@@ -20,16 +20,16 @@ THANKS TO :
 
 Environment :
 
-    Delphi 7 (Full No Add Other Component)
-    Ms. Access 2019 (Database)
+1. Delphi 7 (Full No Add Other Component)
+2. Ms. Access 2019 (Database)
 
 Quote : "Maka sesungguhnya beserta kesulitan ada kemudahan, sesungguhnya beserta kesulitan itu ada kemudahan." Q.S Al-Insyirah (5-6)
 
 Note MIT LICENSE :
 
-    Penulis ingin Memulai Go Open Source
-    Aplikasi ini Untuk Pembelajaran
-    Jika Ingin Mengembangkan Aplikasi ini Di Persilahkan dengan menggunakan Github Secara Open Source
-    Jika Tetap Ingin Menjual Aplikasi ini, Jangan Lupa Hasil Keuntungan dari Penjualan Aplikasi ini di Sedekahkan Ke pada Orang yang membutuhkan, Anak Yatim, Anak Yatim Piatu dan Sebagainya Agar Menjadi Doa Kepada Pembuat Aplikasi Beserta Keluarga Besar https://github.com/achmadiqsan.
+1. Penulis ingin Memulai Go Open Source
+2. Aplikasi ini Untuk Pembelajaran
+3. Jika Ingin Mengembangkan Aplikasi ini Di Persilahkan dengan menggunakan Github Secara Open Source
+4. Jika Tetap Ingin Menjual Aplikasi ini, Jangan Lupa Hasil Keuntungan dari Penjualan Aplikasi ini di Sedekahkan Ke pada Orang yang membutuhkan, Anak Yatim, Anak Yatim Piatu dan Sebagainya Agar Menjadi Doa Kepada Pembuat Aplikasi Beserta Keluarga Besar https://github.com/achmadiqsan.
 
 
