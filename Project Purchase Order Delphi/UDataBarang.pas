@@ -35,6 +35,9 @@ type
     procedure Panel6Click(Sender: TObject);
     procedure Panel4Click(Sender: TObject);
     procedure Panel5Click(Sender: TObject);
+    procedure refresh;
+    procedure FormActivate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,6 +74,14 @@ begin
 
   // coding melakukan pengabungan kode string dan integer :
   Form4.Edit1.Text := 'BR-' + id;
+  Edit2.Clear;
+  Label6.Caption := '';
+  Edit3.Clear;
+  Edit4.Clear;
+  Edit5.Clear;
+  Panel3.Enabled := True;
+  Panel4.Enabled := False;
+  Panel5.Enabled := False;
 end;
 
 procedure TForm4.Edit3KeyPress(Sender: TObject; var Key: Char);
@@ -103,6 +114,9 @@ begin
     Edit3.Clear;
     Edit4.Clear;
     Edit5.Clear;
+    Panel3.Enabled := False;
+    Panel4.Enabled := False;
+    Panel5.Enabled := False;
   end;
 end;
 
@@ -118,8 +132,9 @@ begin
     Edit4.Text := DM.ADOQBarang['satuan'];
     Edit5.Text := DM.ADOQBarang['hargaSatuan'];
     //
-    Panel2.Enabled := False;
     Panel3.Enabled := False;
+    Panel4.Enabled := True;
+    Panel5.Enabled := True;
   end;
 end;
 
@@ -131,8 +146,10 @@ begin
   Edit3.Clear;
   Edit4.Clear;
   Edit5.Clear;
-  Panel2.Enabled := True;
-  Panel3.Enabled := True;
+  Panel3.Enabled := False;
+  Panel4.Enabled := False;
+  Panel5.Enabled := False;
+  refresh;
 end;
 
 procedure TForm4.Panel4Click(Sender: TObject);
@@ -160,8 +177,9 @@ begin
     Edit4.Clear;
     Edit5.Clear;
     //
-    Panel2.Enabled := True;
-    Panel3.Enabled := True;
+    Panel3.Enabled := False;
+    Panel4.Enabled := False;
+    Panel5.Enabled := False;
   end;
 end;
 
@@ -176,7 +194,30 @@ begin
      Edit3.Clear;
      Edit4.Clear;
      Edit5.Clear;
+     //
+     Panel3.Enabled := False;
+     Panel4.Enabled := False;
+     Panel5.Enabled := False;
    End;
+end;
+
+procedure TForm4.refresh;
+begin
+  DM.ADOQBarang.Close;
+  DM.ADOQBarang.Open;
+end;
+
+procedure TForm4.FormActivate(Sender: TObject);
+begin
+  //
+end;
+
+procedure TForm4.FormShow(Sender: TObject);
+begin
+Panel3.Enabled := False;
+  Panel4.Enabled := False;
+  Panel5.Enabled := False;
+  refresh;
 end;
 
 end.
