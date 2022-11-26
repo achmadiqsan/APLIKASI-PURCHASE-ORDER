@@ -33,6 +33,8 @@ type
     procedure Panel6Click(Sender: TObject);
     procedure Panel4Click(Sender: TObject);
     procedure Panel5Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure refresh;
   private
     { Private declarations }
   public
@@ -69,6 +71,13 @@ begin
 
   // coding melakukan pengabungan kode string dan integer :
   Form2.Edit1.Text := 'SUP-' + id;
+    Edit2.Clear;
+    Edit3.Clear;
+    Edit4.Clear;
+    Edit5.Clear;
+    Panel3.Enabled := True;
+    Panel4.Enabled := False;
+    Panel5.Enabled := False;
 end;
 
 procedure TForm2.Panel3Click(Sender: TObject);
@@ -91,6 +100,9 @@ begin
     Edit3.Clear;
     Edit4.Clear;
     Edit5.Clear;
+    Panel3.Enabled := False;
+    Panel4.Enabled := False;
+    Panel5.Enabled := False;
   end;
 end;
 
@@ -103,8 +115,9 @@ begin
     Edit3.Text := DM.ADOQSupplier['alamat']  ;
     Edit4.Text := DM.ADOQSupplier['telpon']  ;
     Edit5.Text := DM.ADOQSupplier['email']  ;
-    Panel2.Enabled := False;
     Panel3.Enabled := False;
+    Panel4.Enabled := True;
+    Panel5.Enabled := True;
   end;
 end;
 
@@ -115,8 +128,10 @@ begin
   Edit3.Clear;
   Edit4.Clear;
   Edit5.Clear;
-  Panel2.Enabled := True;
-  Panel3.Enabled := True;
+  Panel3.Enabled := False;
+  Panel4.Enabled := False;
+  Panel5.Enabled := False;
+  refresh;
 end;
 
 procedure TForm2.Panel4Click(Sender: TObject);
@@ -139,8 +154,9 @@ begin
     Edit3.Clear;
     Edit4.Clear;
     Edit5.Clear;
-    Panel2.Enabled := True;
-    Panel3.Enabled := True;
+    Panel3.Enabled := False;
+    Panel4.Enabled := False;
+    Panel5.Enabled := False;
   end;
 end;
 
@@ -155,7 +171,24 @@ begin
      Edit3.Clear;
      Edit4.Clear;
      Edit5.Clear;
+     Panel3.Enabled := False;
+     Panel4.Enabled := False;
+     Panel5.Enabled := False;
    End;
+end;
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+  Panel3.Enabled := False;
+  Panel4.Enabled := False;
+  Panel5.Enabled := False;
+  refresh;
+end;
+
+procedure TForm2.refresh;
+begin
+    DM.ADOQSupplier.Close;
+  DM.ADOQSupplier.Open;
 end;
 
 end.
